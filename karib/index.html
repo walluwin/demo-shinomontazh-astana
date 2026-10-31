@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>KarIb — улица Доспамбет жырау, 94/3, Астана</title>
+<meta name="description" content="KarIb на улице Доспамбет жырау: шиномонтаж без очереди">
+<meta name="theme-color" content="#16181d">
+<style>
+  :root {
+    /* Цвета ниши: меняются здесь */
+    --bg: #f3f3f0;
+    --card: #ffffff;
+    --ink: #16181d;
+    --muted: #5d636e;
+    --line: #e3e2dd;
+    --hero: #16181d;
+    --hero-2: #23262e;
+    --hero-ink: #ffffff;
+    --hero-muted: #b4b9c2;
+    --accent: #ff6a13;
+    --accent-dark: #e05500;
+    --accent-ink: #ffffff;
+    --accent-soft: #fff1e8;
+    --star: #ffb400;
+    --ok: #2fb344;
+    --closed: #ff6b6b;
+    --radius: 18px;
+    --shadow: 0 1px 2px rgba(22,24,29,.04), 0 6px 20px rgba(22,24,29,.06);
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; padding-bottom: 92px; overflow-x: hidden; }
+  a { color: inherit; }
+  svg { flex-shrink: 0; }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 16px; }
+
+  .demo { background: #fff6cc; color: #5c4a00; font-size: 13px; line-height: 1.35; text-align: center; padding: 7px 16px; }
+
+  /* ---------- Первый экран ---------- */
+  .hero { position: relative; overflow: hidden; color: var(--hero-ink);
+    background:
+      repeating-linear-gradient(135deg, rgba(255,255,255,.025) 0 14px, transparent 14px 28px),
+      linear-gradient(160deg, var(--hero-2), var(--hero)); }
+  .hero::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 6px;
+    background: repeating-linear-gradient(90deg, var(--accent) 0 28px, transparent 28px 40px); opacity: .9; }
+  .hero-inner { position: relative; z-index: 1; padding: 28px 16px 40px; }
+  .hero-wheel { position: absolute; z-index: 0; right: -70px; top: 20px; width: 260px; height: 260px; color: #fff; opacity: .06; pointer-events: none; }
+  .eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); }
+  .eyebrow svg { width: 20px; height: 20px; }
+  h1 { font-size: clamp(30px, 8.5vw, 52px); line-height: 1.05; letter-spacing: -.01em; margin: 10px 0 10px; overflow-wrap: anywhere; }
+  .addr { display: flex; align-items: flex-start; gap: 8px; margin: 0 0 12px; color: var(--hero-muted); font-size: 15px; }
+  .addr svg { width: 18px; height: 18px; margin-top: 2px; color: var(--accent); }
+  .addr.big { color: var(--hero-ink); font-size: clamp(19px, 5vw, 24px); font-weight: 700; line-height: 1.25; }
+  .addr.big svg { width: 22px; height: 22px; margin-top: 3px; }
+  .addr .district { font-weight: 400; color: var(--hero-muted); white-space: nowrap; }
+  .tagline { font-size: clamp(17px, 4.5vw, 20px); line-height: 1.4; color: #e6e8ec; margin: 0 0 16px; max-width: 34em; }
+  .meta { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+  .badge { display: inline-flex; align-items: center; gap: 7px; border-radius: 999px; padding: 6px 12px; font-size: 14px; font-weight: 600; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.14); }
+  .badge .dot { width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
+  .badge.open { color: #8ce99a; border-color: rgba(140,233,154,.4); background: rgba(47,179,68,.14); }
+  .badge.closed { color: #ffa8a8; border-color: rgba(255,168,168,.4); background: rgba(255,107,107,.12); }
+  .badge.rate { color: var(--hero-ink); text-decoration: none; }
+  .badge.rate b { color: var(--star); }
+  .badge.rate span { color: var(--hero-muted); font-weight: 400; }
+  .phone { display: inline-block; font-size: clamp(28px, 8vw, 40px); font-weight: 800; letter-spacing: .01em; text-decoration: none; margin: 0 0 14px; white-space: nowrap; }
+  .btns { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; max-width: 480px; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 54px; padding: 0 18px; border-radius: 14px; font-size: 17px; font-weight: 700; text-decoration: none; border: 2px solid transparent; transition: background .15s, transform .1s; }
+  .btn:active { transform: scale(.98); }
+  .btn svg { width: 20px; height: 20px; }
+  .btn.primary { background: var(--accent); color: var(--accent-ink); }
+  .btn.primary:hover { background: var(--accent-dark); }
+  .btn.ghost { border-color: rgba(255,255,255,.4); color: var(--hero-ink); }
+  .btn.ghost:hover { background: rgba(255,255,255,.08); }
+  .btn.outline { border-color: var(--ink); color: var(--ink); }
+  .btn.outline:hover { background: var(--ink); color: #fff; }
+
+  /* ---------- Блоки ---------- */
+  main { padding: 8px 0 8px; }
+  section { background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); padding: 22px 18px; margin: 16px 0; }
+  h2 { display: flex; align-items: center; gap: 10px; font-size: 23px; line-height: 1.2; margin: 0 0 16px; }
+  h2 .ic { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 10px; background: var(--accent-soft); color: var(--accent); }
+  h2 .ic svg { width: 20px; height: 20px; }
+  .about { font-size: 17px; color: var(--ink); margin: 0; }
+
+  .svc { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 10px; }
+  .svc li { display: flex; align-items: center; gap: 12px; padding: 14px; border: 1px solid var(--line); border-radius: 14px; font-weight: 600; line-height: 1.3; }
+  .svc li svg { width: 26px; height: 26px; color: var(--accent); }
+  .price-note { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-top: 14px; padding: 14px 16px; border-radius: 14px; background: var(--accent-soft); }
+  .price-note p { margin: 0; font-weight: 600; flex: 1 1 220px; }
+  .price-note .btn { min-height: 46px; font-size: 16px; flex: 0 0 auto; }
+
+  .price-list { list-style: none; margin: 0; padding: 0; }
+  .price-list li { display: flex; justify-content: space-between; gap: 16px; padding: 12px 0; border-bottom: 1px dashed var(--line); }
+  .price-list li:last-child { border-bottom: 0; }
+  .price { font-weight: 800; white-space: nowrap; }
+  .price.ask { font-weight: 400; color: var(--muted); font-size: 14px; white-space: normal; text-align: right; }
+
+  .highlights { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+  .highlights li { display: flex; align-items: flex-start; gap: 12px; font-size: 17px; font-weight: 600; line-height: 1.35; }
+  .highlights li::before { content: "✓"; flex: 0 0 28px; height: 28px; border-radius: 50%; background: var(--accent); color: #fff; font-size: 15px; display: grid; place-items: center; }
+
+  .rating { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; margin-bottom: 12px; }
+  .rating .num { font-size: 48px; font-weight: 800; line-height: 1; }
+  .stars { position: relative; display: inline-block; font-size: 24px; letter-spacing: 3px; line-height: 1; color: #dcdcd6; }
+  .stars i { position: absolute; left: 0; top: 0; overflow: hidden; white-space: nowrap; color: var(--star); font-style: normal; }
+  .rating .count { color: var(--muted); font-size: 15px; }
+  .quote { margin: 0 0 14px; padding: 14px 16px; border-left: 4px solid var(--accent); background: var(--bg); border-radius: 0 12px 12px 0; font-size: 17px; }
+  .more { display: inline-flex; align-items: center; gap: 6px; font-weight: 700; color: var(--accent-dark); text-decoration: none; }
+  .more:hover { text-decoration: underline; }
+
+  .loc-addr { font-size: 18px; font-weight: 700; margin: 0; }
+  .loc-district { color: var(--muted); margin: 2px 0 0; }
+  .hours-line { display: flex; align-items: center; gap: 10px; margin: 14px 0 0; font-weight: 600; }
+  .hours-line svg { width: 20px; height: 20px; color: var(--accent); }
+  .hours-table { width: 100%; border-collapse: collapse; margin-top: 14px; }
+  .hours-table td { padding: 7px 0; border-bottom: 1px solid var(--line); }
+  .hours-table td:last-child { text-align: right; }
+  .hours-table tr.off td:last-child { color: var(--muted); }
+  .hours-table tr.today td { font-weight: 800; color: var(--accent-dark); }
+  .map { display: block; width: 100%; height: 300px; border: 0; border-radius: 14px; margin-top: 16px; background: var(--line); }
+  .loc-btns { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; align-items: center; }
+  .loc-btns .more { margin-left: 4px; }
+
+  .cta { position: relative; overflow: hidden; background: linear-gradient(160deg, var(--hero-2), var(--hero)); color: var(--hero-ink); text-align: center; padding: 30px 18px; }
+  .cta h2 { justify-content: center; font-size: 25px; margin-bottom: 8px; }
+  .cta p { color: var(--hero-muted); margin: 0 0 18px; }
+  .cta .btn { width: 100%; max-width: 380px; }
+  .cta .cta-wheel { position: absolute; left: -60px; bottom: -60px; width: 180px; height: 180px; color: #fff; opacity: .05; }
+
+  footer { text-align: center; font-size: 13px; color: var(--muted); padding: 12px 16px 28px; }
+
+  .fab { position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 10; min-height: 58px; box-shadow: 0 10px 28px rgba(224,85,0,.45); }
+
+  @media (min-width: 768px) {
+    body { padding-bottom: 0; }
+    .fab { display: none; }
+    .hero-inner { padding: 48px 16px 60px; }
+    .hero-wheel { right: 4%; top: 50%; transform: translateY(-50%); width: 340px; height: 340px; opacity: .08; }
+    section { padding: 28px; }
+    .btns { grid-template-columns: auto auto; justify-content: start; }
+    .btn { padding: 0 28px; }
+  }
+</style>
+</head>
+<body>
+<div class="demo">Демо-концепт, не официальный сайт. Удалим по первой просьбе.</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wheel" viewBox="0 0 64 64" fill="none" stroke="currentColor">
+    <circle cx="32" cy="32" r="27" stroke-width="8"/>
+    <circle cx="32" cy="32" r="31" stroke-width="2" stroke-dasharray="4 4"/>
+    <circle cx="32" cy="32" r="14" stroke-width="3"/>
+    <circle cx="32" cy="32" r="4" fill="currentColor" stroke="none"/>
+    <path d="M32 18v10M32 36v10M18 32h10M36 32h10M22.1 22.1l7 7M34.9 34.9l7 7M41.9 22.1l-7 7M29.1 34.9l-7 7" stroke-width="2.5" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></symbol>
+  <symbol id="i-route" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l18-8-8 18-2-8-8-2z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></symbol>
+  <symbol id="i-like" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 11v9H4v-9h3zm0 0l4-8c1.7 0 2.5 1 2.5 2.5V9h5.2c1.2 0 2 1 1.8 2.2l-1.3 7c-.2 1-1 1.8-2 1.8H7"/></symbol>
+</svg>
+
+<header class="hero">
+  <svg class="hero-wheel" aria-hidden="true"><use href="#i-wheel"/></svg>
+  <div class="wrap hero-inner">
+    <span class="eyebrow"><svg aria-hidden="true"><use href="#i-wheel"/></svg>Шиномонтаж · Астана</span>
+    <h1>KarIb</h1>
+    
+    <p class="addr"><svg aria-hidden="true"><use href="#i-pin"/></svg><span>улица Доспамбет жырау, 94/3 · Нура район</span></p>
+    <p class="tagline">KarIb на улице Доспамбет жырау: шиномонтаж без очереди</p>
+    <div class="meta">
+      <span class="badge" id="open-badge" data-hours="{&quot;mon&quot;:&quot;08:30-23:00&quot;,&quot;tue&quot;:&quot;08:30-23:00&quot;,&quot;wed&quot;:&quot;08:30-23:00&quot;,&quot;thu&quot;:&quot;08:30-23:00&quot;,&quot;fri&quot;:&quot;08:30-23:00&quot;,&quot;sat&quot;:&quot;08:30-23:00&quot;,&quot;sun&quot;:&quot;08:30-23:00&quot;}" hidden><span class="dot"></span><span class="badge-text"></span></span>
+      <a class="badge rate" href="#reviews"><b>★ 5</b><span>144 оценки</span></a>
+    </div>
+    <div><a class="phone" href="tel:+77058074917">+7 705 807 49 17</a></div>
+    <div class="btns">
+      <a class="btn primary" href="tel:+77058074917"><svg aria-hidden="true"><use href="#i-phone"/></svg>Позвонить</a>
+      <a class="btn ghost" href="https://2gis.kz/astana/directions/points/%7C71.234232%2C51.12139%3B70000001093622927" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-route"/></svg>Маршрут</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section><p class="about">Шиномонтажная мастерская в районе Нура, на улице Доспамбет жырау, 94/3. Занимается шиномонтажом.</p></section>
+
+  
+  <section id="services">
+    <h2><span class="ic"><svg aria-hidden="true"><use href="#i-wheel"/></svg></span>Услуги</h2>
+    
+    
+    <ul class="svc">
+      <li><svg aria-hidden="true"><use href="#i-wheel"/></svg>Шиномонтаж</li>
+    </ul>
+    <div class="price-note">
+      <p>Цены зависят от размера колёс — назовём по телефону</p>
+      <a class="btn primary" href="tel:+77058074917"><svg aria-hidden="true"><use href="#i-phone"/></svg>Узнать цену</a>
+    </div>
+    
+  </section>
+  
+
+  
+  <section>
+    <h2><span class="ic"><svg aria-hidden="true"><use href="#i-like"/></svg></span>За что хвалят</h2>
+    <ul class="highlights"><li>Быстро и аккуратно</li><li>Без очереди</li><li>Адекватные цены</li></ul>
+  </section>
+  
+
+  
+  <section id="reviews">
+    <h2><span class="ic"><svg aria-hidden="true"><use href="#i-star"/></svg></span>Отзывы</h2>
+    <div class="rating"><span class="num">5</span><span class="stars" aria-label="Рейтинг 5 из 5">★★★★★<i style="width:100%">★★★★★</i></span><span class="count">144 оценки в 2ГИС</span></div>
+    <p class="quote">Клиенты пишут, что здесь быстро и аккуратно, без очереди, а цены адекватные.</p>
+    <a class="more" href="https://2gis.kz/astana/firm/70000001093622927" target="_blank" rel="noopener nofollow">Все отзывы в 2ГИС →</a>
+  </section>
+  
+
+  
+  <section id="contacts">
+    <h2><span class="ic"><svg aria-hidden="true"><use href="#i-pin"/></svg></span>Как добраться</h2>
+    <p class="loc-addr">Астана, улица Доспамбет жырау, 94/3</p>
+    <p class="loc-district">Нура район</p>
+    <p class="hours-line"><svg aria-hidden="true"><use href="#i-clock"/></svg>Ежедневно 08:30–23:00</p>
+    
+    <iframe class="map" src="https://yandex.ru/map-widget/v1/?ll=71.234232%2C51.12139&amp;z=16&amp;pt=71.234232%2C51.12139%2Cpm2rdm" loading="lazy" title="Карта: Астана, улица Доспамбет жырау, 94/3"></iframe>
+    <div class="loc-btns">
+      <a class="btn outline" href="https://2gis.kz/astana/directions/points/%7C71.234232%2C51.12139%3B70000001093622927" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-route"/></svg>Маршрут в 2ГИС</a>
+      <a class="more" href="https://2gis.kz/astana/firm/70000001093622927" target="_blank" rel="noopener nofollow">Карточка в 2ГИС →</a>
+    </div>
+  </section>
+  
+
+  
+  <section class="cta">
+    <svg class="cta-wheel" aria-hidden="true"><use href="#i-wheel"/></svg>
+    <h2>Позвоните — скажем, когда подъехать</h2>
+    <p>Работаем каждый день с 8:30 до 23:00.</p>
+    <a class="btn primary" href="tel:+77058074917"><svg aria-hidden="true"><use href="#i-phone"/></svg>+7 705 807 49 17</a>
+  </section>
+  
+</main>
+
+<footer>Демо-концепт, не официальный сайт «KarIb». Данные взяты из открытой карточки в 2ГИС. Удалим по первой просьбе.</footer>
+
+<a class="btn primary fab" href="tel:+77058074917"><svg aria-hidden="true"><use href="#i-phone"/></svg>Позвонить</a>
+
+<script>
+// Статус «Открыто / Закрыто» по часам работы.
+// Время всегда считается по Астане (UTC+5), независимо от часового пояса посетителя.
+// Один и тот же файл: build.js вставляет его в страницу, scripts/test-hours.js подключает через require.
+// Внимание: не писать в этом файле двойные фигурные скобки — их съест шаблонизатор.
+(function () {
+  var KEYS = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
+  var ACC = ['в воскресенье', 'в понедельник', 'во вторник', 'в среду', 'в четверг', 'в пятницу', 'в субботу'];
+  var GEN = ['воскресенья', 'понедельника', 'вторника', 'среды', 'четверга', 'пятницы', 'субботы'];
+  var TZ_MIN = 5 * 60; // Астана, UTC+5, без перехода на летнее время
+  var DAY = 1440;
+
+  // "10:00-01:00" -> [600, 1500]: конец после полуночи переносится на следующие сутки
+  function parse(s) {
+    var m = String(s || '').match(/(\d{1,2}):(\d{2})\s*[-–—]\s*(\d{1,2}):(\d{2})/);
+    if (!m) return null;
+    var a = +m[1] * 60 + +m[2], b = +m[3] * 60 + +m[4];
+    if (b <= a) b += DAY;
+    return [a, b];
+  }
+  function fmt(m) {
+    m = ((m % DAY) + DAY) % DAY;
+    return ('0' + Math.floor(m / 60)).slice(-2) + ':' + ('0' + (m % 60)).slice(-2);
+  }
+  function is24(iv) { return Boolean(iv) && iv[0] === 0 && iv[1] >= DAY; }
+  function all24(hours) {
+    hours = hours || {};
+    return KEYS.every(function (k) { return is24(parse(hours[k])); });
+  }
+
+  // hours: { mon: "09:00-24:00", ... }, nowMs: Date.now()
+  // -> null (часов нет) | { open: bool, text: string, day: 0..6 (0 = пн) }
+  function openStatus(hours, nowMs) {
+    hours = hours || {};
+    var iv = KEYS.map(function (k) { return parse(hours[k]); });
+    if (!iv.some(Boolean)) return null;
+    var t = new Date(nowMs + TZ_MIN * 60000);
+    var day = t.getUTCDay(), mins = t.getUTCHours() * 60 + t.getUTCMinutes();
+    var res = { open: false, text: '', day: (day + 6) % 7 };
+    if (iv.every(is24)) { res.open = true; res.text = 'Открыто круглосуточно'; return res; }
+
+    // Конец текущего открытого интервала в минутах от сегодняшних 00:00
+    var end = null, y = iv[(day + 6) % 7], d = iv[day];
+    if (y && y[1] > DAY && mins < y[1] - DAY) end = y[1] - DAY; // вчерашняя смена ещё идёт
+    if (d && mins >= d[0] && mins < d[1]) end = Math.max(end || 0, d[1]);
+
+    if (end !== null) {
+      // Смена до полуночи, а следующий день начинается с 00:00 — работают без перерыва
+      for (var i = 0; i < 7 && end % DAY === 0; i++) {
+        var next = iv[(day + end / DAY) % 7];
+        if (!next || next[0] !== 0) break;
+        end = end + next[1];
+      }
+      res.open = true;
+      var until = end % DAY === 0 ? 'полуночи' : fmt(end);
+      // Последняя открытая минута — в какие сутки (0 = сегодня)
+      var lastDay = Math.floor((end - 1) / DAY);
+      // Сегодня или ночью после полуночи — просто «до 01:00»; дальше — с днём недели
+      var plain = lastDay === 0 || (lastDay === 1 && end % DAY !== 0);
+      res.text = 'Открыто до ' + until + (plain ? '' : ' ' + GEN[(day + lastDay) % 7]);
+      return res;
+    }
+
+    if (d && mins < d[0]) { res.text = 'Закрыто, откроется сегодня в ' + fmt(d[0]); return res; }
+    for (var j = 1; j <= 7; j++) {
+      var n = iv[(day + j) % 7];
+      if (n) {
+        res.text = 'Закрыто, откроется ' + (j === 1 ? 'завтра' : ACC[(day + j) % 7]) + ' в ' + fmt(n[0]);
+        return res;
+      }
+    }
+    res.text = 'Закрыто';
+    return res;
+  }
+
+  var api = { openStatus: openStatus, parse: parse, fmt: fmt, all24: all24, is24: is24 };
+  if (typeof module !== 'undefined' && module.exports) { module.exports = api; return; }
+
+  // В браузере: бейдж в шапке + подсветка сегодняшнего дня в таблице часов
+  var el = document.getElementById('open-badge');
+  if (!el) return;
+  var s = openStatus(JSON.parse(el.getAttribute('data-hours')), Date.now());
+  if (!s) return;
+  el.querySelector('.badge-text').textContent = s.text;
+  el.className = 'badge ' + (s.open ? 'open' : 'closed');
+  el.hidden = false;
+  var row = document.querySelector('.hours-table tr[data-day="' + s.day + '"]');
+  if (row) row.className = 'today';
+})();
+
+</script>
+</body>
+</html>
